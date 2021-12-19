@@ -45,7 +45,7 @@ public class ProfilePage{
 	}
 	
 	public void logout() {
-		
+		((JavascriptExecutor) driver).executeScript("return document.readyState");
 		waitForVisibilityOfElement(accountButton);
 		new Actions(driver).moveToElement(accountButton).build().perform();
 		((JavascriptExecutor) driver).executeScript("arguments[0].click()", accountButton);
