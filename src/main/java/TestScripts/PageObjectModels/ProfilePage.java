@@ -40,18 +40,16 @@ public class ProfilePage{
 	
 	public boolean isPageOpened() {
 		waitForVisibilityOfElement(profileUserName);
-		System.out.println("step1");
 		((JavascriptExecutor) driver).executeScript("return document.readyState");
-		System.out.println("step2");
 		return driver.getCurrentUrl().equals("https://twitter.com/" + getAccountName());
 	}
 	
 	public void logout() {
-
+		
 		waitForVisibilityOfElement(accountButton);
 		new Actions(driver).moveToElement(accountButton).build().perform();
 		((JavascriptExecutor) driver).executeScript("arguments[0].click()", accountButton);
-//		waitForVisibilityOfElement(logOutButton);
+		waitForVisibilityOfElement(logOutButton);
 		new Actions(driver).moveToElement(logOutButton).build().perform();	
 		((JavascriptExecutor) driver).executeScript("arguments[0].click()", logOutButton);
 

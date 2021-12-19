@@ -40,7 +40,7 @@ public class LoginLogoutStep extends BaseTest {
 		logOutPage = new LogOutPage(driver);
 		
 		loginPage.openPage();
-//		assertEquals(loginPage.isPageOpened(), true, "Sign in Page is not opened");
+		assertEquals(loginPage.isPageOpened(), true, "login in Page is not opened");
 		loginPage.clickSignIn();
 
 	}
@@ -69,7 +69,7 @@ public class LoginLogoutStep extends BaseTest {
 	@Then("^User Logs out$")
 	public void user_Logs_out() throws Throwable {
 		profPage.logout();
-//		assertEquals(logOutPage.isPageOpened(), true, "Logout page is not opened");
+		assertEquals(logOutPage.isPageOpened(), true, "Logout page is not opened");
 		logOutPage.confirmLogOut();
 //		driver.quit();
 	}
