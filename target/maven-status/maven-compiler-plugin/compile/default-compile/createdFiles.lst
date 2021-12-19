@@ -1,0 +1,7 @@
+TestScripts\PageObjectModels\LogOutPage.class
+TestScripts\SwymAutomation\App.class
+TestScripts\PageObjectModels\ProfilePage.class
+TestScripts\Resources\BaseTest.class
+TestScripts\PageObjectModels\HomePage.class
+TestScripts\PageObjectModels\LoginPage.class
+TestScripts\PageObjectModels\SignInPage.class
